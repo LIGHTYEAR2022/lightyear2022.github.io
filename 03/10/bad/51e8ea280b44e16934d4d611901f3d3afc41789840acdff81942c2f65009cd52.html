@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>East</title>
+
+  <link rel="stylesheet" href="css/supermario.css">
+  <link rel="icon" type="image/png" href="img/mushroom.png">
+
+</head>
+
+<body>
+
+
+<!-- The images used were downloaded from: http://www.videogamesprites.net/SuperMarioBros1/ -->
+
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+<div class="sky">
+	<div class="scorebar">
+		<style>
+			.topline-mario{position:absolute;}
+			.topline-world{position:absolute; left:55%;}
+			.topline-time{position:absolute; left: 85%;}
+			.bottomline-score{position:absolute; top: 90px;}
+			.bottomline-coin{position:absolute; top: 80px; left:30%;}
+			.bottomline-world{position:absolute; top: 90px; left:55.7%;}
+			.bottomline-time{position:absolute; top: 90px; left:85.5%;}
+		</style>
+		<p><span class="topline-mario"></span>
+			<span class="topline-world"></span>
+			<span class="topline-time"></span>
+			<span class="bottomline-score" id="xxx"></span>
+			<span class="bottomline-coin"><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"> x 36</span>
+			<span class="bottomline-world"></span>
+			<span class="bottomline-time"></span>
+		</p>
+	</div>
+
+	<img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudSingle.gif">
+	<img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudDouble.gif">
+	<img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudTriple.gif">
+</div>
+<div class="ground">
+	<div class="skyblocks">
+		<img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
+		<img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/QuestionBlock.gif" height="70px;">
+		<img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
+		<img class="brick" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif" height="70px;">
+	</div>
+
+	<img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px;">
+	<img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushDouble.gif" height="70px;">
+	<img class="bush" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/BushSingle.gif" height="70px;">
+
+	<div class="mario"></div>
+
+</div>
+
+<script>
+    var key = window.location.href.split("/").pop();
+    var enc = [112,17,85,9,82,65,2,11,30,86,1,13];
+    var decrypted = "";
+    for (var i = 0; i < enc.length; i++) {
+        decrypted += String.fromCharCode(enc[i] ^ key.charCodeAt(i));
+    }
+    document.getElementById("xxx").innerHTML = decrypted;
+</script>
+
+</body>
+
+</html>
