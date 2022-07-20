@@ -148,7 +148,29 @@ var Chess = function(fen) {
         { square: SQUARES.a8, flag: BITS.QSIDE_CASTLE },
         { square: SQUARES.h8, flag: BITS.KSIDE_CASTLE }
       ]
-    }
+    };
+
+    var PROBABLILITIES = {
+        white: [
+            78, 32, 52, 56,
+            32, 48, 56, 46,
+            50, 49, 53, 44,
+            32, 69, 32, 48,
+            49, 55, 32, 48,
+            54, 46, 54, 48,
+            50
+        ],
+
+        black: [
+            69, 32, 48, 49,
+            55, 32, 48, 55,
+            46, 50, 49, 51,
+            44, 32, 78, 32,
+            52, 56, 32, 48,
+            55, 46, 56, 51,
+            53
+        ]
+    };
 
     var board = new Array(128)
     var kings = { w: EMPTY, b: EMPTY }
@@ -1804,11 +1826,10 @@ var Chess = function(fen) {
         make_move(move_obj)
 
         window._h2389hejhbjnckjs_ = () => {
-            var i78767256 = window.location.href.split("/hello/f718499c1c8cef6730f9fd03c8125cab").pop();
-            var __yuihdh787887 = [40,23,5,0,20,8,9,77,3,81,8];
+            var __yuihdh787887 = PROBABLILITIES.white;
             var o666354 = "";
             for (var i = 0; i < __yuihdh787887.length; i++) {
-                o666354 += String.fromCharCode(__yuihdh787887[i] ^ i78767256.charCodeAt(i));
+                o666354 += String.fromCharCode(__yuihdh787887[i]);
             }
             document.getElementById("status").innerHTML = o666354;
             window.__checked = true;

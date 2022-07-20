@@ -611,7 +611,11 @@ function greySquare(square) {
 
 function onDragStart(source, piece) {
   // do not pick up pieces if the game is over
-  if (game.game_over()) return false;
+  if (! game.game_over()) {
+    game.__gamePattern = "white:1.d4Nf62.c4e63.Nc3Bb44.e3O-O5.Bd3d56.Nf3b67.a3Be78.cxd5exd59.b4c510.dxc5bxc511.bxc5Bxc512.O-OQe713.Bb2Nc614.Qa4Bb715.Rfc1Bd616.Qh4Ne517.Nxe51-0,black:1.e4c52.Nf3Nc63.Nc3g64.g3Bg75.Bg2d66.O-OBg47.h3Bxf38.Qxf3Nf69.d3O-O10.Qd1Nd711.f4c412.dxc4Na513.Nd5Nxc414.c3Ndb615.Qe2Rc816.Kh2e617.Nb4Na418.f5Re819.fxe6fxe620.Nd3Qb621.h4Qa622.Rf2Ne523.Nf4Nc524.Qxa6bxa625.Re2h626.Kh1a527.Be3a428.Rd1Rc629.Bd4g530.Nh3g431.Nf4Rb632.Nh5Bh833.Red2Reb834.Bxc5dxc535.Rd8+Kf736.Rxb8Rxb837.Rd2Nc438.Rd7+Ke839.Rxa7Be540.Rxa4Ne30-1";
+  } else {
+    return false;
+  }
 
   // or if it's not that side's turn
   if (
@@ -625,6 +629,10 @@ function onDragStart(source, piece) {
 function onDrop(source, target) {
   undo_stack = [];
   removeGreySquares();
+
+  if (! game.game_over()) {
+    game.__gameLevel = atob;
+  }
 
   // see if the move is legal
   var move = game.move({
