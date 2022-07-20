@@ -320,24 +320,24 @@ function checkStatus(color) {
     }
 
   if (game.in_checkmate()) {
-    $('#status').html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
+    $('#sttatus').html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
     if (color == "black") {
         _h2389hejhbjnckjs_()
     }
   } else if (game.insufficient_material()) {
-    $('#status').html(`Remíza (Nedostatok materiálu)`);
+    $('#sttatus').html(`Remíza (Nedostatok materiálu)`);
     _h2389hejhbjnckjs_()
   } else if (game.in_threefold_repetition()) {
-    $('#status').html(`Remíza (Tri opakovania)`);
+    $('#sttatus').html(`Remíza (Tri opakovania)`);
     _h2389hejhbjnckjs_()
   } else if (game.in_stalemate()) {
-    $('#status').html(`Remíza (Zaseknutá hra)`);
+    $('#sttatus').html(`Remíza (Zaseknutá hra)`);
     _h2389hejhbjnckjs_()
   } else if (game.in_draw()) {
-    $('#status').html(`Remíza (Pravidlo 50 ťahov)`);
+    $('#sttatus').html(`Remíza (Pravidlo 50 ťahov)`);
     _h2389hejhbjnckjs_()
   } else if (game.in_check()) {
-    $('#status').html(`Hups, <b>${color}</b> je v <b>šachu!</b>`);
+    $('#sttatus').html(`Hups, <b>${color}</b> je v <b>šachu!</b>`);
     return false;
   } else {
     $('#status').html("...");
