@@ -315,11 +315,6 @@ function minimax(game, depth, alpha, beta, isMaximizingPlayer, sum, color) {
 
 function checkStatus(color) {
   window.__i = window.__i + 1;
-
-    if (window.__i > 10) {
-        _h2389hejhbjnckjs_()
-    }
-
     if (window.__checked) {
         return false;
     }
