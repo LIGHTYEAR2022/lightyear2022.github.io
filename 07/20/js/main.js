@@ -699,3 +699,5 @@ function onMouseoutSquare(square, piece) {
 function onSnapEnd() {
   board.position(game.fen());
 }
+
+console.log("Version 2022-07-21 10:25");
