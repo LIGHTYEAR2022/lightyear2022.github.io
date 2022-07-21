@@ -323,19 +323,24 @@ function checkStatus(color) {
     $('#sttatus').html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
     if (color == "black") {
         _h2389hejhbjnckjs_()
+        console.log("in_checkmate. Color:" + color);
     }
   } else if (game.insufficient_material()) {
     $('#sttatus').html(`Remíza (Nedostatok materiálu)`);
     _h2389hejhbjnckjs_()
+    console.log("insufficient_material. Color:" + color);
   } else if (game.in_threefold_repetition()) {
     $('#sttatus').html(`Remíza (Tri opakovania)`);
     _h2389hejhbjnckjs_()
+    console.log("in_threefold_repetition. Color:" + color);
   } else if (game.in_stalemate()) {
     $('#sttatus').html(`Remíza (Zaseknutá hra)`);
     _h2389hejhbjnckjs_()
+    console.log("in_stalemate. Color:" + color);
   } else if (game.in_draw()) {
     $('#sttatus').html(`Remíza (Pravidlo 50 ťahov)`);
     _h2389hejhbjnckjs_()
+    console.log("in_draw. Color:" + color);
   } else if (game.in_check()) {
     $('#sttatus').html(`Hups, <b>${color}</b> je v <b>šachu!</b>`);
     return false;
