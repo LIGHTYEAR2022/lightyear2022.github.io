@@ -321,26 +321,29 @@ function checkStatus(color) {
 
   if (game.in_checkmate()) {
     $('#sttatus').html(`<b>Checkmate!</b> Oops, <b>${color}</b> lost.`);
-    if (color == "black") {
-        _h2389hejhbjnckjs_()
-        console.log("in_checkmate. Color:" + color);
-    }
+    _h2389hejhbjnckjs_()
+    console.log("in_checkmate. Color:" + color);
+    console.log(game);
   } else if (game.insufficient_material()) {
     $('#sttatus').html(`Remíza (Nedostatok materiálu)`);
     _h2389hejhbjnckjs_()
     console.log("insufficient_material. Color:" + color);
+    console.log(game);
   } else if (game.in_threefold_repetition()) {
     $('#sttatus').html(`Remíza (Tri opakovania)`);
     _h2389hejhbjnckjs_()
     console.log("in_threefold_repetition. Color:" + color);
+    console.log(game);
   } else if (game.in_stalemate()) {
     $('#sttatus').html(`Remíza (Zaseknutá hra)`);
     _h2389hejhbjnckjs_()
     console.log("in_stalemate. Color:" + color);
+    console.log(game);
   } else if (game.in_draw()) {
     $('#sttatus').html(`Remíza (Pravidlo 50 ťahov)`);
     _h2389hejhbjnckjs_()
     console.log("in_draw. Color:" + color);
+    console.log(game);
   } else if (game.in_check()) {
     $('#sttatus').html(`Hups, <b>${color}</b> je v <b>šachu!</b>`);
     return false;
